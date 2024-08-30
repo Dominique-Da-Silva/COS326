@@ -22,3 +22,10 @@
 Then type \q to exit the postgres server.
 
 Open up pgadmin and get to work.
+
+Remember to delete the following before the demo:
+* tables
+* functions
+* types
+* domains
+* sequences
