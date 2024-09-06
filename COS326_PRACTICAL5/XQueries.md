@@ -72,9 +72,33 @@ return concat($musician/name, ", rate: ",
 ```
 
 ## Question 10 
-Design an interesting FLWOR query of your choice for the Musicians database. 
-Marks will
-be awarded based on the level of interestingness and usefulness.:)
+List all musicians who are in a band and have released at least 2 albums (prints in descending order from most albums), along with the names of the members and how many members are in the band.
+This query shows all bands (i.e., musicians of type "band") who have released more than one album as well as the albums that have been released, and it also lists the members of the band.
 ```
-
+for $musician in //musician[@type="band"]
+let $albums := $musician/albums/album
+let $members := $musician/members/member
+where count($albums) >= 2
+order by count($albums) descending
+return
+  concat(
+    "Band name: ", $musician/name, "&#10;",
+    
+    "Members (", count($members), "):&#10;", 
+    string-join(
+      for $member in $members
+      return concat("  ", $member/first_name, " ", $member/last_name), 
+      "&#10;"
+    ), "&#10;",
+    
+    "Album Count: ", count($albums), "&#10;", 
+    
+    "Albums:&#10;", 
+    string-join(
+      for $album in $albums
+      return concat("  ", $album), 
+      "&#10;"
+    ), "&#10;",
+    "==================", "&#10;"
+  )
 ```
