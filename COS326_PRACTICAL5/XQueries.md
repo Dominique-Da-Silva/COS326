@@ -1,0 +1,70 @@
+# TASK 1 XPATH EXPRESSIONS
+## Question 1 
+List the names of all the musicians in the database.
+```
+//musicians/musician/name/text()
+```
+
+## Question 2 
+For a specific musician, list the album names and their years.
+```
+//musicians/musician[name= 'Billy Talent']/albums/album
+```
+
+## Question 3 
+List the names of all the musicians who have release an album titled "Lateralus".
+```
+//musicians/musician[albums/album='Lateralus']/name/text()
+```
+
+
+## Question 4 
+List all the musicians who have the word "Pop" anywhere in their genre.
+```
+//musicians/musician[contains(genre, 'Pop')]/name/text()
+```
+
+## Question 5
+List all the solo musicians.
+```
+//musicians/musician[@type="solo"]/name/text()
+```
+
+## Question 6 
+Show the name and genre of the second solo musician.
+```
+//musicians/musician[@type="solo"][2]/name/text() | //musicians/musician[@type="solo"][2]/genre/text()
+```
+
+## Question 7 
+Display the fourth album by the musician "Ben Folds".
+```
+//musicians/musician[name='Ben Folds']/albums/album[4]/text()
+```
+
+## Question 8
+List the names of albums that were released in 2008 o later.
+```
+//musicians/musician/albums/album[@year >= 2008]/text()
+```
+
+
+
+# TASK 2 FLWOR EXPRESSIONS
+
+
+## Question 9 
+Write a FLWOR query to determine the rate at which a specific musician produces albums.
+List all the musician names and their corresponding rates, ordering the results from the most frequent to the least frequent. 
+For example, assume that a specific artist has released three albums in 2001, 2002 and 2004. To calculate the rate, divide the difference in years between the first and last album by the number of albums. 
+The calculation for this example is then: (2004-2001+1)/3 = 1.3 years. 
+Make sure that each artist is displayed on a new line.
+
+
+
+## Question 10 
+Design an interesting FLWOR query of your choice for the Musicians database. 
+Marks will
+be awarded based on the level of interestingness and usefulness.:)
+
+
