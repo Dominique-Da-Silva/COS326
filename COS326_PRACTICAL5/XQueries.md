@@ -59,12 +59,22 @@ List all the musician names and their corresponding rates, ordering the results 
 For example, assume that a specific artist has released three albums in 2001, 2002 and 2004. To calculate the rate, divide the difference in years between the first and last album by the number of albums. 
 The calculation for this example is then: (2004-2001+1)/3 = 1.3 years. 
 Make sure that each artist is displayed on a new line.
-
-
+```
+for $musician in //musician
+let $albums := $musician/albums/album
+let $years := $albums/@year
+let $rate := (max($years) - min($years) + 1) div count($albums)
+order by $rate ascending
+return concat($musician/name, ", rate: ", 
+    if ($rate = xs:integer($rate)) 
+    then $rate 
+    else format-number($rate, '#.00'))
+```
 
 ## Question 10 
 Design an interesting FLWOR query of your choice for the Musicians database. 
 Marks will
 be awarded based on the level of interestingness and usefulness.:)
+```
 
-
+```
