@@ -2,7 +2,7 @@
 ## Question 1 
 List the names of students enrolled in the "Database Systems" course.
 ```
-for $s in //student
+for $s in doc("students.xml")//student
 where $s/enrollments/course/@code = 'COS326'
 return $s/name
 ```
@@ -10,22 +10,13 @@ return $s/name
 ## Question 2 
 Count the total number of students enrolled in "Discrete Structures" course.
 ```
-let $course_name := 'Discrete Structures'
-let $total_count := count(
-  for $s in //student
-  where $s/enrollments/course/@name = $course_name
-  return $s
-)
-return <course>
-          <name>{$course_name}</name>
-          <total_count>{$total_count}</total_count>
-        </course>
+
 ```
 
 ## Question 3 
 List all courses offered by the "Mathematics" department.
 ```
-for $c in //course
+for $c in doc("courses.xml")//course
 where $c/department = 'Mathematics'
 return $c/name
 ```
