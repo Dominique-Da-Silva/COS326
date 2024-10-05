@@ -49,3 +49,30 @@ sudo systemctl restart mongod
 ```
 sudo systemctl status mongod
 ```
+
+
+# Example Commands
+```
+insertPatients("HospitalDB", "Patients", 10)
+```
+```
+findAdmittedPatients("HospitalDB", "Patients")
+```
+```
+updatePatientAdmission("HospitalDB", "Patients", " Palesa Mohlare ", true)
+```
+```
+removeDischargedPatients("HospitalDB", "Patients")
+```
+```
+doctorStats("HospitalDB", "Patients")
+```
+```
+doctorPatientList("HospitalDB", "Patients", "Dr. Mandela")
+```
+```
+activeDoctorsMR("HospitalDB", "Patients")
+```
+```
+appointmentStats("HospitalDB", "Patients")
+```
