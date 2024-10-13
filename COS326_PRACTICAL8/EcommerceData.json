@@ -1,0 +1,89 @@
+{
+  "products": [
+    {
+      "product_id": "P001",
+      "name": "Laptop X1 Carbon",
+      "category": "Electronics",
+      "price": 1200,
+      "stock": 10,
+      "reviews": [
+        {
+          "review": "Excellent laptop with great performance!",
+          "rating": 5
+        },
+        {
+          "review": "Good value for money, but battery life could be better.",
+          "rating": 4
+        }
+      ]
+    },
+    {
+      "product_id": "P002",
+      "name": "Smartphone Galaxy S20",
+      "category": "Mobile",
+      "price": 800,
+      "stock": 50,
+      "reviews": [
+        {
+          "review": "Amazing display, but the price is a bit high.",
+          "rating": 4
+        },
+        {
+          "review": "Camera quality is excellent, but the phone is too bulky for my taste.",
+          "rating": 3
+        }
+      ]
+    },
+    {
+      "product_id": "P003",
+      "name": "Wireless Headphones",
+      "category": "Audio",
+      "price": 150,
+      "stock": 100,
+      "reviews": [
+        {
+          "review": "Very comfortable and great sound quality.",
+          "rating": 5
+        },
+        {
+          "review": "Affordable, but the noise cancellation is not very effective.",
+          "rating": 3
+        }
+      ]
+    },
+    {
+      "product_id": "P004",
+      "name": "4K TV Ultra HD",
+      "category": "Television",
+      "price": 600,
+      "stock": 25,
+      "reviews": [
+        {
+          "review": "Incredible picture quality! Worth every penny.",
+          "rating": 5
+        },
+        {
+          "review": "Good features, but the sound could be improved.",
+          "rating": 4
+        }
+      ]
+    },
+    {
+      "product_id": "P005",
+      "name": "Gaming Console PS5",
+      "category": "Gaming",
+      "price": 500,
+      "stock": 20,
+      "reviews": [
+        {
+          "review": "Best gaming experience ever!",
+          "rating": 5
+        },
+        {
+          "review": "Price is too high, but the performance is unmatched.",
+          "rating": 4
+        }
+      ]
+    }
+  ]
+}
