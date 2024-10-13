@@ -25,3 +25,10 @@ Click Import to load the JSON data into the products collection.
 
 8. Verify the Data:
 After importing, check the products collection in Compass to ensure that the data was correctly inserted.
+
+
+# How to run
+After you have built the java project
+```
+java -jar MongoPractical7.jar
+```
