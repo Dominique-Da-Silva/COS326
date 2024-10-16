@@ -7,49 +7,49 @@
 ## 2. Cypher Queries for Graph Creation:
 ### a
 
-	#### i. Create ThreatActor, Incident, and Strategy nodes with LAUNCHED relationships:
+#### i. Create ThreatActor, Incident, and Strategy nodes with LAUNCHED relationships:
 	```
 	
 	```
-	#### ii. Show the current nodes and relationships:
+#### ii. Show the current nodes and relationships:
 	```
 	
 	```
-	#### iii. Create MITIGATED_BY relationships between incidents and strategies:
+#### iii. Create MITIGATED_BY relationships between incidents and strategies:
 	```
 	
 	```
-	#### iv. Show the updated contents of the graph:
+#### iv. Show the updated contents of the graph:
 	```
 	
 	```
 
 ### b
-	#### i. List all unique node labels:
+#### i. List all unique node labels:
 	```
 	
 	```
-	#### ii. List all threat actors, sorted by name:
+#### ii. List all threat actors, sorted by name:
 	```
 	
 	```
-	#### iii. List all incidents by severity in descending order:
+#### iii. List all incidents by severity in descending order:
 	```
 	
 	```
-	#### iv. List the relationship types present in the graph:
+#### iv. List the relationship types present in the graph:
 	```
 	
 	```
-	#### v. List all threat actors and the incidents they launched:
+#### v. List all threat actors and the incidents they launched:
 	```
 	
 	```
-	#### vi. List all incidents and their corresponding mitigation strategies:
+#### vi. List all incidents and their corresponding mitigation strategies:
 	```
 	
 	```
-	#### vii. Find the most effective strategy for mitigating incidents:
+#### vii. Find the most effective strategy for mitigating incidents:
 	```
 	
 	```
