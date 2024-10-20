@@ -27,7 +27,7 @@ RETURN i.type AS IncidentType,
 #### d. For all paths of length 2, list the node names and path length:
 ```
 MATCH p=(n)-[r1]->(m)-[r2]->(o)
-RETURN [n.name, m.name, o.name] AS NodeNames, length(p) AS PathLength	
+RETURN [n.name, m.name, o.name] AS NodeNames, length(p) AS PathLength;	
 ```
 
 
