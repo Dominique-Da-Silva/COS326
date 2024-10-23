@@ -15,9 +15,9 @@ Uses PostgreSQL and pgadmin for practical implementation.
 * Practical 6
 
 ### NOSQL
+#### MONGODB
 * Practical 7
 * Practical 8
-
-### 
+#### NEO4J
 * Practical 9
 * Practical 10
