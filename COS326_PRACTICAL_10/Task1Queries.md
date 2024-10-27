@@ -21,8 +21,12 @@ Download the actors.csv and movies.csv files from ClickUP and copy them into the
 
 ### 4. To import data from actors.csv, use the following Cypher query
 ```
-LOADR CSV WITH HEADERS FOM 'file:///actors.csv' AS row
-CREATE (:Actor {id: row.id, name: row.name});
+LOAD CSV WITH HEADERS FROM 'file:///actors.csv' AS row
+  MERGE (a:Actor {id: toInteger(row.id), name: row.name, birth_year: toInteger(row.birth_year)})
+  RETURN
+    a.id AS id,
+    a.name AS name,
+    a.birth_year AS birth_year
 ```
 
 ### 5. To view the contents of the database after importing actors
@@ -33,9 +37,15 @@ MATCH (n) RETURN n LIMIT 25;
 ### 6. To create relationships between actors and movies using movies.csv
 ```
 LOAD CSV WITH HEADERS FROM 'file:///movies.csv' AS row
-MATCH (a:Actor {id: row.actor_id})
-CREATE (m:Movie {title: row.title})
-CREATE (a)-[:ACTED_IN]->(m);
+  MATCH (a:Actor {id: toInteger(row.actor_id)})
+  MERGE (m:Movie {id: toInteger(row.movie_id), title: row.movie_title})
+  MERGE (a)-[r:ACTED_IN]->(m)
+  ON CREATE SET r.role = row.role
+RETURN
+  a.id AS actor_id,
+  m.id AS movie_id,
+  m.title AS movie_title,
+  r.role AS role;
 ```
 
 ### 7. To view the database contents again
