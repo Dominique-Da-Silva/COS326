@@ -3,8 +3,7 @@
 ## Create a new Neo4j database:
 ## ---------------------------------------------------------
 ```
-Create a new project and database by clicking the "+ New" button.
-Name the database Prac10Neo4jB.graphdb and click 'Start'.
+CREATE DATABASE Prac10Neo4jB;
 ```
 
 ## ---------------------------------------------------------
@@ -22,7 +21,7 @@ Download the actors.csv and movies.csv files from ClickUP and copy them into the
 
 ### 4. To import data from actors.csv, use the following Cypher query
 ```
-LOAD CSV WITH HEADERS FROM 'file:///actors.csv' AS row
+LOADR CSV WITH HEADERS FOM 'file:///actors.csv' AS row
 CREATE (:Actor {id: row.id, name: row.name});
 ```
 
