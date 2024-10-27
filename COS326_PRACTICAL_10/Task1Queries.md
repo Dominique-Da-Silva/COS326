@@ -19,6 +19,11 @@ Download the actors.csv and movies.csv files from ClickUP and copy them into the
 ## Import the data into the Neo4j database:
 ## ---------------------------------------------------------
 
+```
+MATCH (n) 
+DETACH DELETE n;
+```
+
 ### 4. To import data from actors.csv, use the following Cypher query
 ```
 LOAD CSV WITH HEADERS FROM 'file:///actors.csv' AS row
